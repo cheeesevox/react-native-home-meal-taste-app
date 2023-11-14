@@ -5,26 +5,34 @@ import { Ionicons } from '@expo/vector-icons'
 const RegisterScreen= ({navigation})=> {
     const[phone, setPhone] = useState("");
 	const[password, setPassword] = useState("");
+	const[username, setUserName] = useState("");
+	const[email, setEmail] = useState("");
+
+
     const onChagePhone = (value) =>{
 		setPhone(value)
 	}
 	const onChagePassword = (value) =>{
 		setPassword(value)
 	}
+    const onChageUserName = (value) =>{
+		setUserName(value)
+	}
+    const onChageEmail = (value) =>{
+		setEmail(value)
+	}
 
     const onClickRegister = () =>{
 		if(phone.length == 0 || password.length == 0){
-			return console.log("Please enter login infomation")
-			setToastType('fail');
-			handleShowToast()
+			return console.log("Please enter Regiter infomation")
 		}else{
-			setToastType('success');
-			handleShowToast()
-			navigation.navigate("FoodList")
+			navigation.navigate("Login")
 		}
-		console.log('Click login', {
+		console.log('Click regiter', {
 			phone,
-			password, 
+			password,
+            username,
+            email
 		})
 	}
   return (
@@ -82,7 +90,7 @@ const RegisterScreen= ({navigation})=> {
 							</Ionicons>
 						</View>
 							<View style={{ padding:20}}>
-								<TextInput placeholder="Your Name" value={phone} onChangeText={onChagePhone}></TextInput>
+								<TextInput placeholder="Your Name" value={username} onChangeText={onChageUserName}></TextInput>
 					</View>
 					</View>
                     {/* user     */}
@@ -92,7 +100,7 @@ const RegisterScreen= ({navigation})=> {
 							</Ionicons>
 						</View>
 							<View style={{padding:20}}>
-								<TextInput placeholder="Your Email" value={password} secureTextEntry={true} onChangeText={onChagePassword}></TextInput>
+								<TextInput placeholder="Your Email" value={email} onChangeText={onChageEmail}></TextInput>
 							</View>
 					</View >
 				</View>
