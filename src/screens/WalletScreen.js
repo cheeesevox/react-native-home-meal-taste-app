@@ -33,6 +33,7 @@ const WalletScreen = ({navigation}) => {
         <View style={{}}>
           <View>
             <Text>Body</Text>
+            
           </View>
         </View>
 
