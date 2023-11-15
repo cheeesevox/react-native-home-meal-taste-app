@@ -20,7 +20,7 @@ const WalletScreen = ({navigation}) => {
       <View style={styles.wallet}>
         <View style={{flexDirection:'row'}}>
           <Text style={{marginLeft:20, fontWeight:'bold', color:'white', fontSize:20}}>100.000</Text>
-          <Text style={{paddingLeft:3, fontWeight:'bold', color:'white'}}>đ</Text>
+          <Text style={{paddingLeft:3, fontWeight:'bold', color:'white'}}>vnđ</Text>
         </View>
         <Text style={{color:'white', fontWeight:'bold', marginTop:40, marginLeft:125, fontSize:15}}>See More</Text>
             <TouchableOpacity
@@ -33,7 +33,7 @@ const WalletScreen = ({navigation}) => {
         <View style={{}}>
           <View>
             <Text>Body</Text>
-            
+
           </View>
         </View>
 
