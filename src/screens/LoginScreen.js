@@ -33,6 +33,8 @@ const LoginScreen = ({ navigation }) => {
 	const onClickLogin = () =>{
 		if(phone.length == 0 || password.length == 0){
 			return console.log("Please enter login infomation")
+			navigation.navigate("FoodList")
+
 			setToastType('fail');
 			handleShowToast()
 		}else{

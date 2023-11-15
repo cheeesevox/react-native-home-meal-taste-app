@@ -36,6 +36,7 @@ const RegisterScreen= ({navigation})=> {
 		})
 	}
   return (
+	
     <View style={{marginTop:30}}>
 			<View>
 				<Text
