@@ -19,14 +19,14 @@ const WalletScreen = ({navigation}) => {
       </View >
       <View style={styles.wallet}>
         <View style={{flexDirection:'row'}}>
-          <Text style={{marginLeft:20, fontWeight:'bold', color:'white', fontSize:20}}>100.000</Text>
+          <Text style={{fontWeight:'bold', color:'white', fontSize:20}}>100.000</Text>
           <Text style={{paddingLeft:3, fontWeight:'bold', color:'white'}}>vnđ</Text>
         </View>
-        <Text style={{color:'white', fontWeight:'bold', marginTop:40, marginLeft:125, fontSize:15}}>See More</Text>
+        <Text style={{color:'white', fontWeight:'bold', marginTop:40,textAlign:'center', fontSize:15}}>See More</Text>
             <TouchableOpacity
-            style={{color:'white', marginLeft:40, marginLeft:130}}
+            style={{color:'white'}}
             >
-              <Ionicons style={{color:'white', fontWeight:'bold', marginLeft:20, fontSize:20}}name='caret-down-circle-outline' ></Ionicons>
+              <Ionicons style={{alignContent:'center' ,justifyContent:'center',color:'white', fontWeight:'bold', textAlignVertical:'center',alignItems:'center', fontSize:20}}name='caret-down-circle-outline' ></Ionicons>
             </TouchableOpacity>
         </View>
 
@@ -68,6 +68,8 @@ const styles = StyleSheet.create({
               width: '80%',
               height: '30%',
               alignContent:'space-between',
+              alignItems:'center',
+              justifyContent:'center',
               marginVertical:10,
               marginLeft:40,
   },

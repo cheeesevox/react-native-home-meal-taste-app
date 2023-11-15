@@ -71,7 +71,7 @@ const RegisterScreen= ({navigation})=> {
 							</Ionicons>
 						</View>
 							<View style={{ padding:20}}>
-								<TextInput placeholder="Your Phone Numbers" value={phone} onChangeText={onChagePhone}></TextInput>
+								<TextInput width={280} placeholder="Your Phone Numbers" value={phone} onChangeText={onChagePhone}></TextInput>
 					</View>
 					</View>
                     {/* password for register */}
@@ -81,7 +81,7 @@ const RegisterScreen= ({navigation})=> {
 							</Ionicons>
 						</View>
 							<View style={{padding:20}}>
-								<TextInput placeholder="Your Password" value={password} secureTextEntry={true} onChangeText={onChagePassword}></TextInput>
+								<TextInput width={280} placeholder="Your Password" value={password} secureTextEntry={true} onChangeText={onChagePassword}></TextInput>
 							</View>
 					</View >
                     {/* user name */}
@@ -91,7 +91,7 @@ const RegisterScreen= ({navigation})=> {
 							</Ionicons>
 						</View>
 							<View style={{ padding:20}}>
-								<TextInput placeholder="Your Name" value={username} onChangeText={onChageUserName}></TextInput>
+								<TextInput width={280} placeholder="Your Name" value={username} onChangeText={onChageUserName}></TextInput>
 					</View>
 					</View>
                     {/* user     */}
@@ -101,7 +101,7 @@ const RegisterScreen= ({navigation})=> {
 							</Ionicons>
 						</View>
 							<View style={{padding:20}}>
-								<TextInput placeholder="Your Email" value={email} onChangeText={onChageEmail}></TextInput>
+								<TextInput  width={280} placeholder="Your Email" value={email} onChangeText={onChageEmail}></TextInput>
 							</View>
 					</View >
 				</View>

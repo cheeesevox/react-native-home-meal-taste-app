@@ -98,7 +98,10 @@ const LoginScreen = ({ navigation }) => {
 						
 						<View>
 							<View style={{ padding:20}}>
-								<TextInput placeholder="Your Phone Numbers" value={phone} onChangeText={onChagePhone}></TextInput>
+								<TextInput placeholder="Your Phone Numbers" 
+								value={phone}
+								width={280}
+								 onChangeText={onChagePhone}></TextInput>
 							</View>
 						</View>
 					</View>
@@ -108,8 +111,13 @@ const LoginScreen = ({ navigation }) => {
 							<Ionicons name="lock-closed-outline" size={20}>
 							</Ionicons>
 						</View>
-							<View style={{padding:20}}>
-								<TextInput placeholder="Your Password" value={password} secureTextEntry={true} onChangeText={onChagePassword}>
+							<View style={{padding:20}}
+							>
+								<TextInput placeholder="Your Password"
+								 value={password}
+								 secureTextEntry={true}
+								width={280}
+								onChangeText={onChagePassword}>
 								</TextInput>
 							</View>
 
