@@ -11,6 +11,8 @@ const FoodListScreen = () => {
 			{/* render header */}
 			<Header headerText={""} headerIcon={"bell-o"} />
 
+			
+
 			{/* Search Filter */}
 			<SearchFilter icon="search" placeholder={"enter your favorate food"} />
 

@@ -16,3 +16,11 @@ export const loginUser = () =>{
         console.log("login error in here")
     }
 }
+export const getOrderByID =(id)=>{
+    try {
+        const repose = axios.get(`https://homemealtaste.azurewebsites.net/api/Order/get-order-by-order-id?id=${id}`)
+        return repose.data
+    } catch (error) {
+        console.log("error by id get order")
+    }
+}
