@@ -74,7 +74,24 @@ const FoodDetailsScreen = ({ navigation, route }) => {
 								// backgroundColor: "green",
 							}}
 						>
-							<View
+							{/* <View
+								style={{
+									flexDirection:"column-reverse",
+									backgroundColor: "rgba(255, 0, 0, 0.38)",
+									// paddingHorizontal: 16,
+									paddingVertical: 10,
+									borderRadius: 8,
+									alignItems: "center",
+									width: 100,
+								}}
+							>
+								<Text style={{ fontSize: 40 }}>🍲</Text>
+								<Text style={{ fontSize: 20, fontWeight: 400 }}>
+									{item.dish0}
+								</Text>
+							</View>
+							 */}
+							 <View
 								style={{
 									backgroundColor: "rgba(255, 0, 0, 0.38)",
 									// paddingHorizontal: 16,
