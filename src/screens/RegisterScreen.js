@@ -39,12 +39,13 @@ const RegisterScreen= ({navigation})=> {
 	
     <View style={{marginTop:30}}>
 			<View>
+				<View style={{justifyContent:"center",alignItems:"center"}}>
 				<Text
 					style={{
 						marginTop:20,
 						fontSize: 30,
 						fontWeight: "bold",
-						marginLeft:90,
+						
 						color: "#3c444c",
 					}}
 				>
@@ -55,13 +56,13 @@ const RegisterScreen= ({navigation})=> {
 						fontSize: 25,
 						fontWeight: "bold",
 						color: 'red',
-						marginLeft:45,
+						
 						marginBottom: 40,
 					}}
 				>
 					Welcome To Mommy Kitchen!
 					</Text>
-					
+					</View>
 				</View>
 				<View>
                     {/*phone for register */}
@@ -114,6 +115,7 @@ const RegisterScreen= ({navigation})=> {
                         </Text>
                         
 			        </View>
+					<View style={{justifyContent:"center", alignItems:"center"}}>
 					<TouchableOpacity
 				// onPress={() => navigation.navigate("FoodList")}
 				onPress={onClickRegister}
@@ -122,7 +124,6 @@ const RegisterScreen= ({navigation})=> {
 					backgroundColor: "#f96163",
 					borderRadius: 18,
 					marginTop:30,
-					marginLeft:80,
 					justifyContent:"center",
 					paddingVertical: 18,
 					width: "60%",
@@ -135,7 +136,7 @@ const RegisterScreen= ({navigation})=> {
 					Regiter
 				</Text>
 			</TouchableOpacity>
-
+</View>
 			<View style={{justifyContent:"center",alignItems:"center"}}>
 				<Text style={{marginTop:50}}>
 					Already Have Account ? 

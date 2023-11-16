@@ -60,17 +60,18 @@ const LoginScreen = ({ navigation }) => {
 				/>
 
 			</View>
-			<View>
+			<View style={{justifyContent:"center", alignItems:"center"}}>
 				<Image
 					source={require("../../assets/images/loginimage.png")}
-					style={{ marginTop: 100, marginLeft:120, }}
+					style={{ marginTop: 100, justifyContent:"center", alignItems:"center" }}
 				/>
 				<Text
 					style={{
 						marginTop:20,
 						fontSize: 30,
 						fontWeight: "bold",
-						marginLeft:90,
+						justifyContent:"center",
+						alignItems:"center",
 						color: "#3c444c",
 					}}
 				>
@@ -81,15 +82,13 @@ const LoginScreen = ({ navigation }) => {
 						fontSize: 25,
 						fontWeight: "bold",
 						color: 'red',
-						marginLeft:120,
-						marginBottom: 40,
 					}}
 				>
 					Welcome Back!
 					</Text>
 					
 				</View>
-				<View>
+				<View style={{paddingTop:30}}>
 					<View style={{paddingLeft:10,marginHorizontal:40, flexDirection:'row', borderColor:'grey', borderWidth:1, borderRadius:10, marginBottom:10}}>
 						<View style={{justifyContent:"center", alignItems:"center",}}>
 							<Ionicons name="call-outline" size={20}>
@@ -123,7 +122,7 @@ const LoginScreen = ({ navigation }) => {
 
 					</View >
 				</View>
-					
+					<View style={{justifyContent:"center", alignItems:"center"}}>
 					<TouchableOpacity
 				// onPress={() => navigation.navigate("FoodList")}
 				onPress={onClickLogin}
@@ -131,19 +130,19 @@ const LoginScreen = ({ navigation }) => {
 				style={{
 					backgroundColor: "#f96163",
 					borderRadius: 18,
-					marginTop:30,
-					marginLeft:80,
+					marginTop:60,
 					justifyContent:"center",
 					paddingVertical: 18,
 					width: "60%",
 					alignItems: "center",
+					
 				}}
 			>
 				<Text style={{ fontSize: 18, color: "#fff", fontWeight: "700",}}>
 					Login
 				</Text>
 			</TouchableOpacity>
-
+			</View>
 			<View style={{justifyContent:"center",alignItems:"center"}}>
 				<Text style={{marginTop:50}}>
 					If You Don't Have An Account ?

@@ -6,6 +6,7 @@ import {
 	Image,
 	StepperInput,
 	Pressable,
+	TouchableOpacity,
 } from "react-native";
 import React from "react";
 import { colors, recipeList } from "../Constant";
@@ -15,7 +16,7 @@ import { useNavigation } from "@react-navigation/native";
 const FoodCard = () => {
 	const navigation = useNavigation();
 	return (
-		<View>
+		<View style={{justifyContent:"center"}}>
 			<FlatList
 				data={recipeList}
 				renderItem={({ item }) => (
@@ -49,12 +50,26 @@ const FoodCard = () => {
 									color={colors.COLOR_PRIMARY}
 								/>
 							</View>
+							
+						</View>
+						<View><View><Text>{item.area}</Text></View>
+						</View>
+						<View>
+	
+							<TouchableOpacity 
+							style={{paddingTop:20}}
+							onPress={()=>navigation.navigate("Feedback")}>
+								<Text style={{borderWidth:2, borderRadius:10, padding:5, borderColor:'grey'}}>
+									Feedback Of Kitchen
+								</Text>
+							</TouchableOpacity>
 						</View>
 					</Pressable>
+
 				)}
 				numColumns={2}
 				columnWrapperStyle={{
-					justifyContent: "space-between",
+					justifyContent: "space-around", flexWrap: "wrap", flexDirection:"row"
 				}}
 				showsVerticalScrollIndicator={false}
 			/>

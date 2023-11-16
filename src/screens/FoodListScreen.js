@@ -19,7 +19,7 @@ const FoodListScreen = () => {
 			{/* sessiion filter */}
 
 			<View style={{ marginTop: 22 }}>
-				<Text style={{ fontSize: 22, fontWeight: "bold" }}>Session</Text>
+				<Text style={{ fontSize: 22, fontWeight: "bold" }}>Area</Text>
 				{/* session list */}
 				<CategoriesFilter />
 			</View>
