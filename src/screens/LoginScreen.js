@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput, } from "react-native";
 import React, { useState } from "react";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 import { Ionicons } from '@expo/vector-icons'
 import ToastMessage from "../components/ToastMessage";
 import { useRef } from "react";
@@ -32,12 +31,10 @@ const LoginScreen = ({ navigation }) => {
 	//button login
 	const onClickLogin = () =>{
 		if(phone.length == 0 || password.length == 0){
-			return console.log("Please enter login infomation")
-			navigation.navigate("FoodList")
-
-			setToastType('fail');
-			handleShowToast()
-		}else{
+            navigation.navigate("FoodList")
+			return console.log("Please enter login infomation");
+		}
+		else{
 			setToastType('success');
 			handleShowToast()
 			navigation.navigate("FoodList")

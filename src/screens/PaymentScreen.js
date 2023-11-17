@@ -5,6 +5,7 @@ const PaymentScreen = ({})=> {
   return (
     <View>
       <Text style={{alignContent:'center'}}>PaymentScreen</Text>
+      
     </View>
   )
 }
