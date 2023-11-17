@@ -12,81 +12,11 @@ import UserProfileScreen from "../screens/UserProfileScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import FeedBackScreen from "../screens/FeedBackScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Ionicons from '@expo/vector-icons';
 
 const Stack = createNativeStackNavigator();
 
-const Tabs = createBottomTabNavigator();
-// const screenOption = {
-//     tabBarShowLabel: false,
-//     headerShown: false,
-//     tabBarStyle: {
-//         position: "absolute",
-//         bottom: 0,
-//         right: 0,
-//         left: 0,
-//         elevation: 0,
-//         height: 60,
-//         background: "#fff"
-//     }
-// }
-// const Navbar=()=> {
-//     return (
-//         <NavigationContainer>
-//             <Tab.Navigator screenOption={screenOption}>
-//                 <Tab.Screen name="Home" 
-//                             component={FoodListScreen}
-//                             option={{
-//                                 tabBarIcon:({focused})=>{
-//                                     return(
-//                                         <View style={{alignItems:'center', justifyContent:'center'}}>
-//                                             <Entypo name="home" size={24} color={focused ? "#16247d":"111"}/>
-//                                             <Text style={{fontSize:12, color:"#16247d"}}>HOME</Text>
-//                                         </View>
-//                                     )
-//                                 } 
-//                             }}/>
-//                 <Tab.Screen name="Order" 
-//                             component={OrderScreen}
-//                             option={{
-//                                 tabBarIcon:({focused})=>{
-//                                     return(
-//                                         <View style={{alignItems:'center', justifyContent:'center'}}>
-//                                             <Entypo name="home" size={24} color={focused ? "#16247d":"111"}/>
-//                                             <Text style={{fontSize:12, color:"#16247d"}}>ORDER</Text>
-//                                         </View>
-//                                     )
-//                                 } 
-//                             }} />
-//                 <Tab.Screen name="Wallet" 
-//                             component={WalletScreen}
-//                             option={{
-//                                 tabBarIcon:({focused})=>{
-//                                     return(
-//                                         <View style={{alignItems:'center', justifyContent:'center'}}>
-//                                             <Entypo name="home" size={24} color={focused ? "#16247d":"111"}/>
-//                                             <Text style={{fontSize:12, color:"#16247d"}}>WALLET</Text>
-//                                         </View>
-//                                     )
-//                                 } 
-//                             }} />
-//                 <Tab.Screen name="UserProfile"
-//                             component={UserProfileScreen}
-//                             option={{
-//                                 tabBarIcon:({focused})=>{
-//                                     return(
-//                                         <View style={{alignItems:'center', justifyContent:'center'}}>
-//                                             <Entypo name="home" size={24} color={focused ? "#16247d":"111"}/>
-//                                             <Text style={{fontSize:12, color:"#16247d"}}>USERPROFILE</Text>
-//                                         </View>
-//                                     )
-//                                 } 
-//                             }} />
-//             </Tab.Navigator>
-//         </NavigationContainer>
-//     )
-// }
-
-
+const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
 	return (
@@ -102,6 +32,31 @@ const AppNavigator = () => {
 				<Stack.Screen name="Regiter" component={RegisterScreen} />
 				<Stack.Screen name="Feedback" component={FeedBackScreen} />
 			</Stack.Navigator>
+			{/* <Tab.Navigator
+				initialRouteName="FoodList"
+				screenOptions={({ router }) => ({
+					tabBarIcon: ({ focused, color, size }) => {
+						let iconName;
+						let rn = router.name == "FoodList";
+						if (rn == "FoodList") {
+							iconName = focused ? 'foodlist' : 'home-outline'
+						} else if (rn == "Order") {
+							iconName = focused ? 'order' : 'setting-outline'
+						} else if (rn == "Wallet") {
+							iconName = focused ? 'wallet' : 'wallet-outline'
+						} else if (rn == "UserProfile") {
+							iconName == focused ? 'userprofile' : 'person-outline'
+						}
+						return <Ionicons name={iconName} size={size} color={color} />
+					},
+				})}>
+					<Tab.Screen name="FoodList" component={FoodListScreen} options={{ tabBarBadge: 3 }} />
+					{/* <Tab.Screen name="FoodList" component={FoodListScreen}/> */}
+					<Tab.Screen name="Order" component={OrderCartScreen}/>
+					<Tab.Screen name="Wallet" component={WalletScreen}/>
+					<Tab.Screen name="UserProfile" component={UserProfileScreen}/>
+			{/* </Tab.Navigator> */} 
+
 		</NavigationContainer>
 	);
 };

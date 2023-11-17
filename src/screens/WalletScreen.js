@@ -31,9 +31,8 @@ const WalletScreen = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       <View style={{}}>
-        <View>
+        <View style={{padding:50}}>
           <Text>Body</Text>
-
         </View>
       </View>
 
