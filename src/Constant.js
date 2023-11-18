@@ -99,7 +99,7 @@ const foods = [
 		name: 'Salad',
 		ingredients: 'Mixed Pizza',
 		quantity:"5",
-		price: '30.000',
+		price: '30000',
 		image: require("../assets/images/tuna.png"),
 
 
@@ -108,7 +108,7 @@ const foods = [
 		id: '2',
 		name: 'Mam Pho Mai',
 		quantity:"5",
-		price: '40.000',
+		price: '40000',
 		image: require("../assets/images/tuna.png"),
 
 
@@ -117,7 +117,7 @@ const foods = [
 		id: '3',
 		name: 'Hot dog Xuc Xich',
 		quantity:"5",
-		price: '51.000',
+		price: '51000',
 		image: require("../assets/images/tuna.png"),
 
 	},

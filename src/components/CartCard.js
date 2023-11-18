@@ -11,8 +11,9 @@ const CartCard =({item})=>{
           paddingVertical:20,
           flex:1
           }}>
-            <Text style={{fontWeight:'bold', fontSize:16}}>{item.name}</Text>
-            <Text style={{fontSize:17,fontWeight:'bold'}}>{item.price}</Text>
+            {/* <Text style={{fontWeight:'bold', fontSize:16}}>{item.name}</Text>
+            <Text style={{fontWeight:'bold', fontSize:16}}>{item.quantity}</Text>
+            <Text style={{fontSize:17,fontWeight:'bold'}}>{item.price}</Text> */}
         </View>
         <View style={{marginRight:20,alignItems:'center'}}>
           <Text style={{fontWeight:'bold',fontSize:18}}>1</Text>
@@ -42,7 +43,6 @@ const styles = StyleSheet.create({
       actionButton:{
         width:80,
         height:30,
-        backgroundColor:Colors.primary,
         borderRadius:30,
         paddingHorizontal:5,
         flexDirection:'row',
