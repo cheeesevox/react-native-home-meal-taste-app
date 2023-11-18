@@ -19,7 +19,10 @@ export const order = [{
 
 export const user=[{
 	id:"1",
-	name:"PHuong"
+	name:"Phương Đại Ka",
+	image: require("../assets/images/avatar.jpg"),
+	wallet:"150.000"
+
 }]
 
 const listProducts = [
@@ -95,6 +98,7 @@ const foods = [
 		id: '1',
 		name: 'Salad',
 		ingredients: 'Mixed Pizza',
+		quantity:"5",
 		price: '30.000',
 		image: require("../assets/images/tuna.png"),
 
@@ -103,6 +107,7 @@ const foods = [
 	{
 		id: '2',
 		name: 'Mam Pho Mai',
+		quantity:"5",
 		price: '40.000',
 		image: require("../assets/images/tuna.png"),
 
@@ -111,9 +116,9 @@ const foods = [
 	{
 		id: '3',
 		name: 'Hot dog Xuc Xich',
+		quantity:"5",
 		price: '51.000',
 		image: require("../assets/images/tuna.png"),
-
 
 	},
 

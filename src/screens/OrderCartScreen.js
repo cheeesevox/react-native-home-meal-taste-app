@@ -7,6 +7,8 @@ import foods, { colors } from '../Constant'
 
 const OrderCartScreen = ({ navigation }) => {
   const CartCard = ({ item }) => {
+
+
     return <View style={styles.cartcard}>
 
       <View style={{
@@ -15,23 +17,27 @@ const OrderCartScreen = ({ navigation }) => {
         paddingVertical: 20,
         flex: 1
       }}>
-        <View style={{flexDirection:'row'}}>
+        <View style={{ flexDirection: 'row' }}>
           <Image
             source={item.image}
             style={{ width: 50, height: 50, resizeMode: "cover" }}
           />
-          <Text style={{ textAlign:'center', marginHorizontal:30,marginVertical:10,fontWeight: 'bold', fontSize: 16 }}>{item.name}</Text>
+          <View style={{ justifyContent: 'center', flexDirection: 'column', marginLeft: 20 }}>
+            <Text style={styles.textItem}>{item.name}</Text>
+            <Text style={styles.textItem}>Quantity: {item.quantity}</Text>
+            <Text style={styles.textItem}>{item.price}</Text>
+          </View>
         </View>
-        <Text style={{ fontSize: 17, fontWeight: 'bold' }}>{item.price}</Text>
       </View>
-      <TouchableOpacity>
-        
-      </TouchableOpacity>
     </View>
   }
   return (
+
     <SafeAreaView style={{ backgroundColor: Colors.white, flex: 1 }}>
-      <View style={styles.header}>
+      <View style={{marginBottom:30, justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={styles.titleText}>
+          Cart
+        </Text>
       </View>
       <FlatList
         showsVerticalScrollIndicator={false}
@@ -62,13 +68,18 @@ const OrderCartScreen = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
+  textItem: {
+    fontWeight: 'bold', fontSize: 17,
+    
+  },
+
   header: {
     paddingVertical: 20,
     flexDirection: 'row',
     alignItems: 'center',
     marginHorizontal: 20
   },
-  cartcard: {
+  cartcard: { 
     height: 100,
     elevation: 15,
     borderRadius: 10,
@@ -78,6 +89,21 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     flexDirection: 'row',
     alignItems: 'center'
+  },
+  titleText: {
+    fontWeight: '600',
+    justifyContent: 'center',
+    fontSize: 26,
+    alignContent: 'center',
+    textAlign: 'center',
+    color: '#e65332',
+    borderColor: 'white',
+    backgroundColor: '#fab3a2',
+    fontWeight: 'bold',
+    marginTop: 40,
+    width: '40%',
+    borderRadius: 20,
+    borderWidth: 2
   }
 })
 export default OrderCartScreen;

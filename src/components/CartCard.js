@@ -12,7 +12,6 @@ const CartCard =({item})=>{
           flex:1
           }}>
             <Text style={{fontWeight:'bold', fontSize:16}}>{item.name}</Text>
-            <Text style={{fontSize:13,color:Colors.grey}}>{item.ingredient}</Text>
             <Text style={{fontSize:17,fontWeight:'bold'}}>{item.price}</Text>
         </View>
         <View style={{marginRight:20,alignItems:'center'}}>
