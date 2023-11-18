@@ -15,12 +15,12 @@ const PaymentScreen = ({ navigation }) => {
         >Popular Bank</Text>
       </View>
 
-      <View style={{ alignItems:'center',justifyContent:'center'}}>
+      {/* <View style={{ alignItems:'center',justifyContent:'center'}}>
         <Text
         onPress={()=> navigation.navigate('FoodList')}
         style={{fontSize:26, fontWeight:'bold'}}
         >Home Screen</Text>
-      </View>
+      </View> */}
     </View>
   )
 }

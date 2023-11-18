@@ -13,6 +13,7 @@ import RegisterScreen from "../screens/RegisterScreen";
 import FeedBackScreen from "../screens/FeedBackScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from '@expo/vector-icons';
+import OrderScreen from "../screens/OrderScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,7 @@ const AppNavigator = () => {
 				<Stack.Screen name="Payment" component={PaymentScreen} />
 				<Stack.Screen name="UserProfile" component={UserProfileScreen} />
 				<Stack.Screen name="Regiter" component={RegisterScreen} />
+				{/* <Stack.Screen name="Order" component={OrderScreen} /> */}
 				<Stack.Screen name="Feedback" component={FeedBackScreen} />
 			</Stack.Navigator>
 			{/* <Tab.Navigator
